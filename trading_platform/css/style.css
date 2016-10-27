@@ -60,7 +60,7 @@ dd, dl, ol, ul {
     height: 100%;
     font-size: 15px;
     color: #e2e3e3;
-    background: transparent url(./img/icon-search.svg) no-repeat 0px;
+    background: transparent url(../img/icon-search.svg) no-repeat 0px;
     border: none;
     outline:medium;
 }
@@ -120,15 +120,15 @@ dd, dl, ol, ul {
     vertical-align: middle;
 }
 #soccer span{
-    background-image: url(./img/soccer.svg);
+    background-image: url(../img/soccer.svg);
     background-size: 30px 30px;
 }
 #basketball span{
-    background-image: url(./img/basketball.png);
+    background-image: url(../img/basketball.png);
     background-size: 30px 30px;
 }
 #lol span{
-    background-image: url(./img/lol.png);
+    background-image: url(../img/lol.png);
     background-size: 30px 30px;
 }
 .root-node .third-nav{
@@ -280,7 +280,7 @@ dd, dl, ol, ul {
     width: 99%;
     height:99%;
     margin: 0 5px 0 0;
-    background: url(./img/bg1.jpg) no-repeat center;
+    background: url(../img/bg1.jpg) no-repeat center;
     box-shadow: 1px 1px 1px #666;
 }
 #content .banner .banner-pic1 + li{
@@ -296,10 +296,10 @@ dd, dl, ol, ul {
     box-shadow: 2px 1px 1px #666;
 }
 #content .banner .banner-pic2{
-    background: url(./img/smallBg2.jpg) no-repeat center;
+    background: url(../img/smallBg2.jpg) no-repeat center;
 }
 #content .banner .banner-pic3{
-    background: url(./img/smallBg1.jpg) no-repeat center;
+    background: url(../img/smallBg1.jpg) no-repeat center;
 }
 
 .banner-toggle{
