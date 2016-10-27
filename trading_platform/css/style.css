@@ -192,7 +192,7 @@ dd, dl, ol, ul {
     width: 24px;
     font-size: 18px;
 }
-#sidebar .icon-angle{
+#sidebar .icon-angle, .toggle-all{
     margin: 0 6px;
     font-size: 12px;
 }
@@ -238,10 +238,12 @@ dd, dl, ol, ul {
 #bets_accordion .bets-inner{
     text-align: center;
     vertical-align: middle;
-    min-height: 50px;
+    /*min-height: 50px;*/
+    height: 50px;
     color: #333;
     background-color: #fff;
     text-transform: uppercase;
+    position: relative;
 }
 #save_confirmation{
     padding: 10px;
