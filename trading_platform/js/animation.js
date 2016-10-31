@@ -3,8 +3,8 @@
  */
 var $ = function(ele){return document.querySelector(ele)};
 var $$ = function(ele){return document.querySelectorAll(ele)};
-//display:noneÊµÏÖÏÔÊ¾Òş²Ø
-//ÇĞ»»Òş²ØÏÔÊ¾×´Ì¬
+//display:noneå®ç°æ˜¾ç¤ºéšè—
+//åˆ‡æ¢éšè—æ˜¾ç¤ºçŠ¶æ€
 function toggle(ele,speed){
     if(hasClass(ele,'hide')){
         removeClass(ele,'hide');
@@ -12,20 +12,20 @@ function toggle(ele,speed){
         addClass(ele,'hide');
     }
 }
-//È«²¿Òş²Ø
+//å…¨éƒ¨éšè—
 function hideall(ele,speed){
     if(!hasClass(ele,'hide')){
         addClass(ele,'hide');
     }
 }
-//È«²¿ÏÔÊ¾
+//å…¨éƒ¨æ˜¾ç¤º
 function showall(ele,speed){
     if(hasClass(ele,'hide')){
         removeClass(ele,'hide');
     }
 }
 
-//½¥½øÇĞ»»
+//æ¸è¿›åˆ‡æ¢
 function toggleSlow(ele,itarget){
     clearInterval(ele.otimer);
     ele.otimer = setInterval(function(){
@@ -38,21 +38,21 @@ function toggleSlow(ele,itarget){
     },30)
 }
 
-//¼ıÍ·È«ÉÏ
+//ç®­å¤´å…¨ä¸Š
 function angleAllUp(ele){
     if(hasClass(ele,'icon-chevron-down')){
         removeClass(ele,'icon-chevron-down');
         addClass(ele,'icon-chevron-up');
     }
 }
-//¼ıÍ·È«ÏÂ
+//ç®­å¤´å…¨ä¸‹
 function angleAllDown(ele){
     if(hasClass(ele,'icon-chevron-up')){
         removeClass(ele,'icon-chevron-up');
         addClass(ele,'icon-chevron-down');
     }
 }
-//¼ıÍ·ÇĞ»»×´Ì¬
+//ç®­å¤´åˆ‡æ¢çŠ¶æ€
 function angleToggle(ele){
     if(hasClass(ele,'icon-chevron-down')){
         removeClass(ele,'icon-chevron-down');
@@ -63,9 +63,9 @@ function angleToggle(ele){
     }
 }
 
-//µã»÷ÇĞ»»Í¼Æ¬À¸bannerÒş²ØÇé¿ö,ÇĞ»»²à±ßÀ¸µÄÒş²ØÇé¿ö
+//ç‚¹å‡»åˆ‡æ¢å›¾ç‰‡æ banneréšè—æƒ…å†µ,åˆ‡æ¢ä¾§è¾¹æ çš„éšè—æƒ…å†µ
 
-//·½·¨Ò»£º
+//æ–¹æ³•ä¸€ï¼š
 //function toggleEvent(){
 //    addHandler($('#banner-toggle'),'click',function(){
 //        return toggle($('#banner'));
@@ -81,8 +81,8 @@ function angleToggle(ele){
 //    });
 //}
 
-//·½·¨¶ş
-//±Õ°üÕûËÀÎÒÁË¡­¡­¡­¡­¿Ş¡­¡­¡­¡­
+//æ–¹æ³•äºŒ
+//é—­åŒ…æ•´æ­»æˆ‘äº†â€¦â€¦â€¦â€¦å“­â€¦â€¦â€¦â€¦
 
 function toggleEvent() {
     addHandler($('#banner-toggle'), 'click', function () {
@@ -91,7 +91,7 @@ function toggleEvent() {
             angleToggle($('#banner-toggle'));
         })();
     });
-    //²à±ßÀ¸Èı¸öµ¥¶ÀÒş²Ø
+    //ä¾§è¾¹æ ä¸‰ä¸ªå•ç‹¬éšè—
     for(var i=0;i<$$('.bets-toggle').length;i++) {
         (function (m) {
             addHandler($$('.bets-toggle')[m], 'click', function () {
@@ -104,7 +104,7 @@ function toggleEvent() {
             });
         })(i);
     }
-    //²à±ßÀ¸Èı¸öÒ»ÆğÒş²Ø
+    //ä¾§è¾¹æ ä¸‰ä¸ªä¸€èµ·éšè—
     addHandler($('.btn-up'),'click',function(){
         for(var i=0;i<$$('.bets-inner').length;i++){
             (function(m){
@@ -113,7 +113,7 @@ function toggleEvent() {
             })(i);
         }
     });
-    //²à±ßÀ¸Èı¸öÒ»ÆğÏÔÊ¾
+    //ä¾§è¾¹æ ä¸‰ä¸ªä¸€èµ·æ˜¾ç¤º
     addHandler($('.btn-down'),'click',function(){
         for(var i=0;i<$$('.bets-inner').length;i++){
             (function(m){
@@ -124,5 +124,5 @@ function toggleEvent() {
     });
 }
 
-//µ÷ÓÃÇĞ»»Òş²ØÇé¿öº¯Êı
+//è°ƒç”¨åˆ‡æ¢éšè—æƒ…å†µå‡½æ•°
 toggleEvent();

@@ -1,7 +1,7 @@
 /**
  * Created by Lychee on 2016/10/27.
  */
-//添加事件
+//娣诲姞浜嬩欢
 function addHandler(ele,type,handler){
     if(ele.addEventListener){
         return ele.addEventListener(type,handler,false);
@@ -11,17 +11,17 @@ function addHandler(ele,type,handler){
         return ele['on'+type]=handler;
     }
 }
-//判断类名
+//鍒ゆ柇绫诲悕
 function hasClass(obj,cls){
     return obj.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
 }
-//添加类名
+//娣诲姞绫诲悕
 function addClass(obj,cls){
     if(!this.hasClass(obj,cls)){
         obj.className += ' ' + cls;
     }
 }
-//移除类名
+//绉婚櫎绫诲悕
 function removeClass(obj,cls){
     if(this.hasClass(obj,cls)){
         var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
