@@ -21,6 +21,9 @@ dd, dl, ol, ul {
     padding: 0;
     list-style: none;
 }
+.clear-both{
+    clear:both;
+}
 .wrapper{
     min-height: 100vh;
     position: relative;
@@ -236,14 +239,195 @@ dd, dl, ol, ul {
 }
 
 #bets_accordion .bets-inner{
+    position: relative;
     text-align: center;
     vertical-align: middle;
     /*min-height: 50px;*/
-    height: 50px;
+    /*height: 50px;*/
     color: #333;
     background-color: #fff;
     text-transform: uppercase;
+    padding: 0 2px;
+    text-align: center;
+}
+#bets_accordion .bets-inner .accordion-header{
+    font-weight: 400;
+    font-size: .91667em;
+    line-height: 2.49999em;
+    box-shadow: none;
+    background: 0 0;
+    color: #666;
+    padding: 0 3px;
     position: relative;
+    text-align: left;
+}
+#bets_accordion .bets-inner .accordion-header .toggle-all{
+    position: relative;
+    display: inline-block;
+    margin:0 10px 0 2px;
+    opacity: .7;
+}
+#bets_accordion .bets-inner .accordion-header a+i{
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    font-size:15px;
+    opacity: .5;
+    transition: opacity .4s;
+}
+#bets_accordion .bets-inner .accordion-header a+i:hover{
+    opacity: 1;
+}
+#bets_accordion .bets-inner .accordion-body .header{
+    font-size: .8333em;
+    line-height: 1.20005em;
+    color: #666;
+    text-transform: uppercase;
+}
+#bets_accordion .bets-inner .accordion-body .offer{
+    display: table-row;
+}
+#bets_accordion .bets-inner .accordion-body .offer div{
+    display: table-cell;
+    font-size: .91667em;
+    line-height: 1.36363em;
+    vertical-align: middle;
+    padding: 2px 0;
+}
+#bets_accordion .bets-inner .accordion-body .offer .runner_market{
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    padding-left: 5px;
+    text-align: left;
+}
+#bets_accordion .bets-inner .accordion-body .offer .runner_market span{
+    display: block;
+    overflow: hidden;
+}
+#bets_accordion .bets-inner .accordion-body .offer .runner_market .match_name{
+    font-size: .91667em;
+    line-height: 1.36363em;
+    color: #666;
+}
+#bets_accordion .bets-inner .accordion-body .offer .notices{
+    padding: 0;
+    width: 18px;
+}
+#bets_accordion .bets-inner .accordion-body .offer .odds{
+    position: relative;
+    width: 20%;
+}
+#bets_accordion .bets-inner .accordion-body .offer .stake,
+#bets_accordion .bets-inner .accordion-body .offer .profit_or_liability{
+    width: 17%;
+    padding: 0 2px;
+}
+#bets_accordion .bets-inner .accordion-body .offer .options{
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    padding-left: 0!important;
+    padding-right: 5px;
+    text-align: right;
+    width: 70px;
+}
+#bets_accordion .bets-inner .back .accordion-body form{
+    background-color: #DEF2FE;
+}
+#bets_accordion .bets-inner .lay .accordion-body form {
+    background-color: #FBD8D8;
+}
+#bets_accordion .bets-inner .accordion-body form{
+    display: table-row-group;
+    color: #333;
+    border-spacing: 5px;
+}
+#bets_accordion .bets-inner .accordion-body form .offer div{
+    font-size: .91667em;
+    line-height: 1.36363em;
+    vertical-align: middle;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+#bets_accordion .bets-inner .accordion-body form .offer .form_control{
+    font-size: 8px;
+    box-shadow: rgba(0,0,0,.5) 0 0 3px 0 inset;
+    /*border-color: #999;*/
+    height: 26px;
+    width: 100%;
+    padding: 6px 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    text-align: right;
+}
+#bets_accordion .bets-inner .accordion-body form .offer .odds div{
+    background: linear-gradient(-90deg,#fff 25%,#E7E7E7 75%);
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: rgba(0,0,0,.5) 0 0 3px 0 inset;
+    border: 1px solid rgba(0,0,0,.5);
+    padding: 0;
+    position: absolute;
+    right: 1px;
+    top: 13px;
+}
+#bets_accordion .bets-inner .accordion-body form .offer .odds div i{
+    display: block;
+    height: 12px;
+    width: 13px;
+    padding: 1px;
+}
+#bets_accordion .bets-inner .accordion-body form .offer .odds div i:first-child{
+    border-bottom: solid 1px rgba(0,0,0,.5);
+}
+#bets_accordion .bets-inner .accordion-body form .offer .options button,
+#bets_accordion .bets-toggle .options button{
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 4px;
+}
+#bets_accordion .bets-inner .accordion-body form .offer .options button{
+    background-color: #EEE;
+    border: 1px solid #999;
+    /*display: none;*/
+    margin:5px 0 0 3px;
+}
+#bets_accordion .bets-inner .accordion-body form .offer .options button:hover{
+    background-color: #DDD;
+}
+#bets_accordion .bets-inner .options .submit{
+    background-image: url(../img/icon-success-small.png);
+}
+#bets_accordion .bets-inner .options .trash{
+    background-image: url(../img/icon-bin-small.png);
+}
+#bets_accordion .bets-toggle .options{
+    position:absolute;
+    right:0;
+    display: inline-block;
+    padding: 0 5px 0 0;
+}
+#bets_accordion .bets-toggle .options button{
+    background-color: transparent;
+    border: 1px solid #999;
+    margin:5px 0 0 3px;
+    opacity: .4;
+}
+#bets_accordion .bets-toggle .options:hover button{
+    opacity: 1;
+}
+#bets_accordion .bets-toggle .options .submit{
+    background-image: url(../img/icon-success-small-white.png);
+}
+#bets_accordion .bets-toggle .options .trash{
+    background-image: url(../img/icon-bin-small-white.png);
 }
 #save_confirmation{
     padding: 10px;
@@ -269,7 +453,7 @@ dd, dl, ol, ul {
 }
 #content .banner ul{
     list-style: none;
-
+    height:100%;
 }
 #content .banner ul li{
     display: block;

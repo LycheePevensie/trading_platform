@@ -58,8 +58,56 @@
             </h2>
             <div id="bets_accordion" class="">
                 <div class="">
-                    <div class="bets-toggle"><i class="icon-angle icon-chevron-down"></i><span>Betslip</span></div>
-                    <div class="bets-inner">No selections</div>
+                    <div class="bets-toggle">
+                        <i class="icon-angle icon-chevron-down"></i>
+                        <span>Betslip</span>
+                        <div class="options">
+                            <button class="submit"></button>
+                            <button class="trash"></button>
+                        </div>
+                    </div>
+                    <div class="bets-inner">
+                        <span style="display: none;">No selections</span>
+                        <div class="back">
+                            <div class="accordion-header">
+                                <i class="toggle-all icon-chevron-up"></i><a>abc VS def</a><i class="icon-calendar"></i>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="header">
+                                    <div class="offer">
+                                        <div class="runner_market"><span>Back</span></div>
+                                        <div class="notices"></div>
+                                        <div class="odds"><span>ODDS DECIMAL</span></div>
+                                        <div class="stake"><span>STAKE $</span></div>
+                                        <div class="profit_or_liability"><span>PROFIT $</span></div>
+                                        <div class="options"></div>
+                                    </div>
+                                </div>
+                                <form>
+                                    <div class="offer">
+                                        <div class="runner_market">
+                                            <span>abc</span>
+                                            <span class="match_name">Match Odds</span>
+                                        </div>
+                                        <div class="notices"></div>
+                                        <div class="odds">
+                                            <input class="form_control">
+                                            <div>
+                                                <i class="icon-plus"></i>
+                                                <i class="icon-minus"></i>
+                                            </div>
+                                        </div>
+                                        <div class="stake"><input class="form_control"></div>
+                                        <div class="profit_or_liability"><input class="form_control"></div>
+                                        <div class="options">
+                                            <button class="submit"></button>
+                                            <button class="trash"></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="">
                     <div class="bets-toggle"><i class="icon-angle icon-chevron-down"></i><span>Unmatched Bets</span></div>
